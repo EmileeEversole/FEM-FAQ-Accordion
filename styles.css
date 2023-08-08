@@ -1,0 +1,289 @@
+/*
+=============== 
+Fonts
+===============
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+    --attribution-pink: hsl(356, 100%, 78%);
+    --attribution-hover: hsl(356,	100%,	70%);
+    /* primary colors */
+    --dark-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+
+    /* background */
+    --violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+
+    /* neutrals */
+    --white: hsl(0, 0%, 100%);
+    --gray-blue: hsl(240, 5%, 91%);
+    --light-gray: hsl(240, 6%, 50%);
+    --dark-gray: hsl(237, 12%, 33%);
+    --black: hsl(0, 0%, 0%,);
+
+    /* typography */
+    --font-primary: 'Kumbh Sans', sans-serif;
+
+    --transition: all 0.3s linear;
+
+
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: var(--font-primary);
+}
+ul {
+    list-style: none;
+}
+.attribution { 
+  font-size: 12px; 
+  text-align: center;
+  word-spacing: 1px;
+  letter-spacing: 0.5px;
+  color: var(--white);
+}
+.attribution a { 
+  color: var(--attribution-pink);
+  transition: var(--transition);
+}
+.attribution a:hover {
+  color: var(--attribution-hover);
+}
+h4 {
+  font-weight: 400;
+  font-size: 15px;
+}
+p {
+  font-size: 12px;
+  margin-bottom: 1rem;
+}
+
+/*
+=============== 
+Mobile Design
+===============
+*/
+@media screen and (max-width : 825px) {
+body {
+  background: linear-gradient(180deg, var(--violet), var(--soft-blue));
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.container {
+  margin: 15vh auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+.wrapper {
+  position: relative;
+  width: fit-content;
+  margin: auto 1vw;
+  background-color: var(--white);
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+.mobile-header {
+  display: flex;
+  justify-content: center;
+}
+.mobile-logo-header {
+  position: relative;
+  width: min-content;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 9rem;
+}
+.bg-pattern-mobile {
+  position: absolute;
+  top: 2rem;
+}
+.logo-mobile {
+  position: absolute;
+}
+.logo-mobile img {
+  width: 100%;
+  object-fit: cover;
+}
+.questions {
+  display: inline-block;
+  text-align: left;
+  padding: 1rem;
+  width: min-content;
+  padding-bottom: 3rem;
+}
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  white-space: nowrap;
+}
+.question-title h4 {
+  padding-right: 1rem;
+}
+.question-btn {
+  background-color: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  transform-origin: center;
+}
+.question-answer {
+  visibility: collapse;
+  display: none;
+}
+hr {
+  border: none;
+  border-top: 1px solid;
+  border-top-color: var(--gray-blue);
+}
+.desk-header {
+  display: none;
+  }
+}
+/*
+=============== 
+Desktop Design
+===============
+*/
+@media screen and (min-width: 826px) {
+  .mobile-header {
+    display: none;
+  }
+  html {
+    min-height: 100%;
+  }
+  body {
+    background: linear-gradient(180deg, var(--violet), var(--soft-blue));
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .container {
+    display: block;
+    width: fit-content;
+    margin: 20vh auto;
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    width: min-content;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  .of-wrap {
+    position: relative;
+    height: 200%;
+  }
+  .desk-header {
+    display: block;
+  }
+  .desktop-logo-header {
+    position: relative;
+    width: min-content;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -4rem;
+  }
+  .logo-desk {
+    position: relative;
+    clip-path: inset(0px 0px 0px 62.5px);
+    left: 0;
+    top: 0;
+  }
+  .overflow {
+    position: absolute;
+    left: -6rem;
+    top: 6.5rem; 
+    height: 100%;
+    width: 100%;
+  }
+  .questions {
+    display: inline-block;
+    text-align: left;
+    padding: 1rem;
+    width: min-content;
+    padding-bottom: 3rem;
+  }
+  .title {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 1rem 0;
+  }
+  .question-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    white-space: nowrap;
+  }
+  .question-title h4 {
+    padding-right: 3rem;
+  }
+  .question-btn {
+    background-color: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    transform-origin: center;
+  }
+  .question-answer {
+    visibility: collapse;
+    display: none;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid;
+    border-top-color: var(--gray-blue);
+  }
+  
+}
+
+
+/*
+=============== 
+Active States
+===============
+*/
+.question-title:hover {
+  color: var(--soft-red);
+  cursor: pointer;
+}
+.show-answer h4 {
+  font-weight: 700;
+}
+.show-answer .question-btn {
+  transform: rotate(180deg);
+}
+.show-answer .question-answer {
+  visibility: visible;
+  display: contents;
+}
